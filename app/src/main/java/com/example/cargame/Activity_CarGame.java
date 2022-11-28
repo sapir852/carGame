@@ -23,7 +23,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Activity_CarGame extends AppCompatActivity {
-    private final int NUM_OF_COLUMNS = 3;
+    private final int NUM_OF_COLUMNS = 5;
     final int DELAY = 1000;
     private final int MAX_LIVES = 3;
 
@@ -34,7 +34,7 @@ public class Activity_CarGame extends AppCompatActivity {
 
     private ShapeableImageView[] game_IMG_hearts;
     private ImageView[] game_IMG_car;
-    private int move = 1;
+    private int move = 2;
     int l=1;
     int r=-1;
 
@@ -93,7 +93,7 @@ public class Activity_CarGame extends AppCompatActivity {
 
     private void moveCar(int direction) {
 
-        if (direction==-1 && move < 2) {
+        if (direction==-1 && move < 4) {
             game_IMG_car[move].setVisibility(View.INVISIBLE);
             move++;
             game_IMG_car[move].setVisibility(View.VISIBLE);
@@ -105,12 +105,6 @@ public class Activity_CarGame extends AppCompatActivity {
     }
 
 
-//    private void refreshUI() {
-//        logic();
-//        chekGame();
-//        //updateTimeUI();
-//
-//    }
 
 
     private void initViews() {
@@ -199,13 +193,17 @@ public class Activity_CarGame extends AppCompatActivity {
 
         game_IMG_car = new ImageView[]{
                 findViewById(R.id.game_IMG_left),
+                findViewById(R.id.game_IMG_midl_left),
                 findViewById(R.id.game_IMG_midl),
+                findViewById(R.id.game_IMG_midl_right),
                 findViewById(R.id.game_IMG_right),};
 
         rock= new ImageView[][]{
-                {findViewById(R.id.game_IMG_rock_00), findViewById(R.id.game_IMG_rock_01), findViewById(R.id.game_IMG_rock_02)},
-                {findViewById(R.id.game_IMG_rock_10), findViewById(R.id.game_IMG_rock_11), findViewById(R.id.game_IMG_rock_12)},
-                {findViewById(R.id.game_IMG_rock_20), findViewById(R.id.game_IMG_rock_21), findViewById(R.id.game_IMG_rock_22)}
+                {findViewById(R.id.game_IMG_rock_00), findViewById(R.id.game_IMG_rock_01), findViewById(R.id.game_IMG_rock_02),findViewById(R.id.game_IMG_rock_03),findViewById(R.id.game_IMG_rock_04)},
+                {findViewById(R.id.game_IMG_rock_10), findViewById(R.id.game_IMG_rock_11), findViewById(R.id.game_IMG_rock_12), findViewById(R.id.game_IMG_rock_13), findViewById(R.id.game_IMG_rock_14)},
+                {findViewById(R.id.game_IMG_rock_20), findViewById(R.id.game_IMG_rock_21), findViewById(R.id.game_IMG_rock_22), findViewById(R.id.game_IMG_rock_23), findViewById(R.id.game_IMG_rock_24)},
+                {findViewById(R.id.game_IMG_rock_30), findViewById(R.id.game_IMG_rock_31), findViewById(R.id.game_IMG_rock_32), findViewById(R.id.game_IMG_rock_33), findViewById(R.id.game_IMG_rock_34)},
+                {findViewById(R.id.game_IMG_rock_40), findViewById(R.id.game_IMG_rock_41), findViewById(R.id.game_IMG_rock_42), findViewById(R.id.game_IMG_rock_43), findViewById(R.id.game_IMG_rock_44)},
         };
 
         vals = new int[rock.length][rock[0].length];

@@ -15,69 +15,59 @@
     android:background="#985522"
   />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="140dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:orientation="horizontal">
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/game_IMG_heart1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_heart"
-            android:scaleType="fitCenter"/>
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/game_IMG_heart2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            app:srcCompat="@drawable/ic_heart"
-            android:scaleType="fitCenter"/>
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/game_IMG_heart3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            app:srcCompat="@drawable/ic_heart"
-            android:scaleType="fitCenter"/>
-
-   </androidx.appcompat.widget.LinearLayoutCompat>-->
-<!--        <View-->
-<!--            android:layout_width="190dp"-->
-<!--            android:layout_height="0dp"/>-->
-
-<!--        <com.google.android.material.textview.MaterialTextView-->
-<!--            android:id="@+id/game_TXT_time"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="0"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="50dp"/>-->
-    </LinearLayout>
-
 
 
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:visibility="visible"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_heart1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_heart"
+                    android:scaleType="fitCenter"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_heart2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:srcCompat="@drawable/ic_heart"
+                    android:scaleType="fitCenter"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/game_IMG_heart3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:srcCompat="@drawable/ic_heart"
+                    android:scaleType="fitCenter"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
 
 
         <LinearLayout
@@ -96,8 +86,9 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:tag="0"
-                app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
                 android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock"
 
                 />
 
@@ -109,8 +100,9 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:tag="0"
-                app:srcCompat="@drawable/ic_rock"
-                android:visibility="invisible"/>
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/game_IMG_rock_02"
@@ -119,8 +111,29 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:tag="0"
-                app:srcCompat="@drawable/ic_rock"
-                android:visibility="invisible"/>
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_03"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_04"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
 
         </LinearLayout>
 
@@ -141,6 +154,7 @@
                 android:layout_weight="1"
                 android:tag="0"
                 app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
                 android:visibility="invisible"/>
 
 
@@ -152,6 +166,7 @@
                 android:layout_weight="1"
                 android:tag="0"
                 app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
                 android:visibility="invisible"/>
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -162,7 +177,28 @@
                 android:layout_weight="1"
                 android:tag="0"
                 app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
                 android:visibility="invisible"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
 
         </LinearLayout>
 
@@ -170,6 +206,7 @@
             android:id="@+id/game_LinLay_rocks_R2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+
             android:layout_weight="1"
             android:orientation="horizontal"
 
@@ -183,6 +220,7 @@
                 android:layout_weight="1"
                 android:tag="0"
                 app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
                 android:visibility="invisible"/>
 
 
@@ -194,6 +232,7 @@
                 android:layout_weight="1"
                 android:tag="0"
                 app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
                 android:visibility="invisible"/>
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -204,13 +243,208 @@
                 android:layout_weight="1"
                 android:tag="0"
                 app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
                 android:visibility="invisible"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_23"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_24"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/game_LinLay_rocks_R3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_30"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
+                android:visibility="invisible"
+
+                />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_31"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
+                android:visibility="invisible"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_32"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
+                android:visibility="invisible"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_33"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_34"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/game_LinLay_rocks_R4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_40"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
+                android:visibility="invisible"
+
+                />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_41"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
+                android:visibility="invisible"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_42"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                app:srcCompat="@drawable/ic_rock"
+                android:padding="5dp"
+                android:visibility="invisible"/>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_43"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/game_IMG_rock_44"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:tag="0"
+                android:padding="5dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/ic_rock" />
 
         </LinearLayout>
 
 
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
 
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:iconTint="@color/white"
+                    android:id="@+id/game_BTN_Left"
+                    app:icon="@drawable/ic_left" />
+
+            </RelativeLayout>
+
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    app:iconTint="@color/white"
+                    android:id="@+id/game_BTN_Right"
+                    app:icon="@drawable/ic_right" />
+
+                +
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
 
 
@@ -235,16 +469,7 @@
         android:visibility="invisible"/>
 
     <ImageView
-        android:id="@+id/game_IMG_midl"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_margin="5dp"
-        android:src="@drawable/ic_car"
-        android:visibility="visible"/>
-
-    <ImageView
-        android:id="@+id/game_IMG_right"
+        android:id="@+id/game_IMG_midl_left"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -252,51 +477,34 @@
         android:src="@drawable/ic_car"
         android:visibility="invisible"/>
 
+    <ImageView
+        android:id="@+id/game_IMG_midl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_car"
+        android:visibility="visible"/>
+        <ImageView
+            android:id="@+id/game_IMG_midl_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_car"
+            android:visibility="invisible"/>
+        <ImageView
+            android:id="@+id/game_IMG_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_car"
+            android:visibility="invisible"/>
+
     </LinearLayout>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                app:iconTint="@color/white"
-                android:id="@+id/game_BTN_Left"
-                app:icon="@drawable/ic_left" />
-
-        </RelativeLayout>
-
-       >
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                app:iconTint="@color/white"
-                android:id="@+id/game_BTN_Right"
-                app:icon="@drawable/ic_right" />
-
-            +
-        </RelativeLayout>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </RelativeLayout>
 
