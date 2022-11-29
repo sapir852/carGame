@@ -4,20 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 
 import android.app.Activity;
-import android.content.Intent;
+
 import android.os.Build;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.util.Log;
+
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageButton;
+
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
-import com.google.android.material.textview.MaterialTextView;
+
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -43,6 +42,13 @@ public class Activity_CarGame extends AppCompatActivity {
     private int live=MAX_LIVES;
 
     private int colum_Choose;
+
+    public interface CallBack_Timer {
+        void tick();
+    }
+
+
+    private MyTicker myTicker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +65,7 @@ public class Activity_CarGame extends AppCompatActivity {
 
         startTimer();
         initVals();
-        //  refreshUI();
+
 
 
 
@@ -67,6 +73,7 @@ public class Activity_CarGame extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        myTicker.start();
 
     }
 
@@ -74,13 +81,13 @@ public class Activity_CarGame extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        stopTimer();
+        myTicker.stop();
 
     }
     @Override
     protected void onStop() {
         super.onStop();
-        stopTimer();
+        myTicker.stop();
     }
     private void initVals(){
         for (int i = 0; i < vals.length; i++) {
@@ -152,11 +159,12 @@ public class Activity_CarGame extends AppCompatActivity {
                     im.setVisibility(View.VISIBLE);
                     im.setImageResource(R.drawable.ic_rock);
 
+
                 }}}}
 
 
     private void chekGame() {
-        if (vals[NUM_OF_COLUMNS-1][move] == 1  ) {
+        if (vals[NUM_OF_COLUMNS-1][move] == 1 ) {
 
             MySignal.getInstance().vibrate();
             live--;
@@ -170,7 +178,7 @@ public class Activity_CarGame extends AppCompatActivity {
     }
 
     private void gameOver() {
-        stopTimer();
+        myTicker.stop();
         MySignal.getInstance().vibrate();
         MySignal.getInstance().toast("GAME OVER!!!! ");
 
@@ -187,9 +195,9 @@ public class Activity_CarGame extends AppCompatActivity {
 
 
         game_IMG_hearts = new ShapeableImageView[]{
-                findViewById(R.id.game_IMG_heart3),
+                findViewById(R.id.game_IMG_heart1),
                 findViewById(R.id.game_IMG_heart2),
-                findViewById(R.id.game_IMG_heart1),};
+                findViewById(R.id.game_IMG_heart3),};
 
         game_IMG_car = new ImageView[]{
                 findViewById(R.id.game_IMG_left),
@@ -244,30 +252,24 @@ public class Activity_CarGame extends AppCompatActivity {
         }
     }
 
-    //timer
-    private Timer timer = new Timer();
+
 
     private void startTimer() {
-        timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
+        CallBack_Timer callBack_timer = new CallBack_Timer() {
             @Override
-            public void run() {
-
+            public void tick() {
                 runOnUiThread(new Runnable() {
+                    @Override
                     public void run() {
-                        logic();
+                        ticker();
                         chekGame();
-
-
-                        //updateTimeUI();
+                        logic();
                     }
                 });
-            }
-        }, DELAY, DELAY);
+            }};
+        myTicker = new MyTicker(callBack_timer);
     }
+    public void ticker() {
 
-    private void stopTimer() {
-        timer.cancel();
     }
-
 }
